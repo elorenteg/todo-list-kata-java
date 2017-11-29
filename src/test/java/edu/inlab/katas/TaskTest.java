@@ -25,4 +25,25 @@ public class TaskTest {
         // Assert
         assertEquals("comprar 2 tomates", task.getDescription());
     }
+
+    @Test
+    public void markTaskAsDone() {
+        // Arange
+        Task task = new Task("comprar tomates");
+
+        // Act
+        task.setAsDone();
+
+        // Assert
+        assertTrue(task.isDone());
+    }
+
+    @Test
+    public void TaskIsNotDoneByDefault() throws Exception {
+        // Act
+        Task task = new Task("comprar tomates");
+
+        // Assert
+        assertFalse(task.isDone());
+    }
 }
