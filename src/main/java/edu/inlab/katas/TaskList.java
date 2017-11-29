@@ -16,4 +16,12 @@ public class TaskList {
     public void addTask(Task task) {
         taskList.add(task);
     }
+
+    public void deleteTask(Task task) {
+        taskList.remove(task);
+    }
+
+    public boolean contain(Task task) {
+        return taskList.contains(task);
+    }
 }
