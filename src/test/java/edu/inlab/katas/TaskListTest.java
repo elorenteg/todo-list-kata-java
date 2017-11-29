@@ -27,6 +27,7 @@ public class TaskListTest {
 
         // Assert
         assertEquals(1, tl.size());
+        assertTrue("Contains the added task", tl.contain(task));
     }
 
     @Test
@@ -42,7 +43,7 @@ public class TaskListTest {
 
         //assert
         assertNotEquals("Size of list is differennt", before_size, tl.size());
-        assertEquals("List not contains the task", false, tl.contain(task));
+        assertFalse("List not contains the task", tl.contain(task));
     }
 
 }
