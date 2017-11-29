@@ -15,7 +15,7 @@ public class TaskTest {
     }
 
     @Test
-    public void changeDescription() throws Exception {
+    public void changeDescription() {
         // Arange
         Task task = new Task("comprar tomates");
 
@@ -39,9 +39,22 @@ public class TaskTest {
     }
 
     @Test
-    public void TaskIsNotDoneByDefault() throws Exception {
+    public void TaskIsNotDoneByDefault() {
         // Act
         Task task = new Task("comprar tomates");
+
+        // Assert
+        assertFalse(task.isDone());
+    }
+
+    @Test
+    public void setTaskUndone() {
+        // Arrange
+        Task task = new Task("comprar tomates");
+        task.setAsDone();
+
+        // Act
+        task.setNotDone();
 
         // Assert
         assertFalse(task.isDone());

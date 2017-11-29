@@ -24,4 +24,8 @@ public class Task {
     public boolean isDone() {
         return isDone;
     }
+
+    public void setNotDone() {
+        this.isDone = false;
+    }
 }
